@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3000698110926545"
   crossorigin="anonymous"></script>
   
@@ -84,7 +85,7 @@
 
     .card a {
       display: block;
-      margin: 10px auto 20px;
+      margin: 10px auto 5px;
       background-color: #ff4081;
       color: white;
       padding: 10px 15px;
@@ -96,18 +97,38 @@
     .card a:hover {
       background-color: #e91e63;
     }
+    .card button {
+      display: inline;
+      margin: 5px auto 10px;
+      background-color: #ff4081;
+      color: white;
+      width: 50px;
+      height: 50px;
+      padding: 5px 5px;
+      text-decoration: none;
+      border: none;
+      border-radius: 100%;
+      font-size: 30px;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
+  
   <div class="navbar">
     <div class="logo">Mensagens Especiais</div>
-    <nav>
+    <div class="ph ph-list" onclick="ShowNav()"></div>
+    <!--
+    <nav class="">
       <a href="#valentim">Dia de São Valentim</a>
       <a href="#maes">Dia das Mães</a>
-    </nav>
-  </div>
+      <a href="#namorados">Dia dos Namorados</a>
+      <a href="#pascoa"></a>
 
+    </nav>
+    -->
+  </div>
+  
   <!-- Container Principal -->
   <div class="container">
     <!-- Card para Dia de São Valentim -->
@@ -115,8 +136,8 @@
       <img src="Assents/download.jpeg" alt="Imagem de São Valentim">
       <h3>Dia de São Valentim</h3>
       <a href="SaoValentim/SaoValentim.html" target="_blank">Acessar Página</a>
-      <button class="copy-button" onclick="copyLink(this)">Copiar Link</button>
-
+      <button class="ph ph-link-simple" onclick="copyLink(this)"></button>
+      <button class="ph ph-share-fat" onclick="shareLink(this)"></button>
     </div>
 
     <!-- Card para Dia das Mães -->
@@ -124,6 +145,8 @@
       <img src="Assents/download (1).jpeg" alt="Imagem de Dia das Mães">
       <h3>Dia das Mães</h3>
       <a href="DiaDasMães/DiaDasMaes.html" target="_blank">Acessar Página</a>
+      <button class="ph ph-link-simple" onclick="copyLink(this)"></button>
+      <button class="ph ph-share-fat" onclick="shareLink(this)"></button>
     </div>
 
      <!-- Card para Dia dos Namorados -->
@@ -131,6 +154,8 @@
       <img src="Assents/download (2).jpeg" alt="Imagem de Dia das Mães">
       <h3>Dia dos Namorados</h3>
       <a href="DiaDosNamorados/DiaDosNamorados.html" target="_blank">Acessar Página</a>
+      <button class="ph ph-link-simple" onclick="copyLink(this)"></button>
+      <button class="ph ph-share-fat" onclick="shareLink(this)"></button>
     </div>
 
      <!-- Card para Páscoa -->
@@ -138,6 +163,8 @@
       <img src="Assents/images.jpeg" alt="Imagem de Dia das Mães">
       <h3>Feliz Pascoa!</h3>
       <a href="FelizPascoa/FelizPascoa.html" target="_blank">Acessar Página</a>
+      <button class="ph ph-link-simple" onclick="copyLink(this)"></button>
+      <button class="ph ph-share-fat" onclick="shareLink(this)"></button>
     </div>
 
   </div>
@@ -153,6 +180,38 @@
         .catch(err => {
           alert("Erro ao copiar o link.");
         });
+    }
+
+
+    function shareLink(button) {
+      const link = button.previousElementSibling.previousElementSibling.href;
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: "Confira essa página especial!",
+          url: link
+        }).then(() => {
+          console.log("Compartilhamento bem-sucedido!");
+        }).catch(err => {
+          alert("Falha ao compartilhar.");
+        });
+      } else {
+        alert("O compartilhamento não é suportado neste dispositivo.");
+      }
+    }
+
+    function ShowNav() {
+           var elementos = document.getElementsByClassName("");
+        for (var i = 0; i < elementos.length; i++) {
+            var elemento = elementos[i];
+            var estiloDisplay = elemento.style.display;
+
+            if (estiloDisplay === "flex" ) {
+                elemento.style.display = "none"; // Ou qualquer outro valor desejado para exibição
+            } else {
+                elemento.style.display = "flex";
+            }
+        }
     }
   </script>
 
