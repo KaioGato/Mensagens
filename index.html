@@ -101,7 +101,7 @@
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">Mensagens</div>
+    <div class="logo">Mensagens Especiais</div>
     <nav>
       <a href="#valentim">Dia de São Valentim</a>
       <a href="#maes">Dia das Mães</a>
@@ -115,6 +115,8 @@
       <img src="Assents/download.jpeg" alt="Imagem de São Valentim">
       <h3>Dia de São Valentim</h3>
       <a href="SaoValentim/SaoValentim.html" target="_blank">Acessar Página</a>
+      <button class="copy-button" onclick="copyLink(this)">Copiar Link</button>
+
     </div>
 
     <!-- Card para Dia das Mães -->
@@ -139,5 +141,20 @@
     </div>
 
   </div>
+
+
+  <script>
+     function copyLink(button) {
+      const link = button.previousElementSibling.href;
+      navigator.clipboard.writeText(link)
+        .then(() => {
+          alert("Link copiado: " + link);
+        })
+        .catch(err => {
+          alert("Erro ao copiar o link.");
+        });
+    }
+  </script>
+
 </body>
 </html>
