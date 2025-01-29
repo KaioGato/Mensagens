@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3000698110926545"
+    crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Páscoa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffefd5, #ffc1e3);
+            color: #6b4226;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 0 0 20px;
+        }
+
+        .egg {
+            width: 150px;
+            height: 200px;
+            background: radial-gradient(circle at top, #ffcccb, #ff8c94);
+            border: 5px solid #6b4226;
+            border-radius: 50% 50% 40% 40%;
+            position: relative;
+            margin: 0 auto 20px;
+        }
+
+        .egg::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 60px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gif {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+
+        .gif:nth-child(1) {
+            top: 10px;
+            left: 10px;
+        }
+
+        .gif:nth-child(2) {
+            top: 10px;
+            right: 10px;
+        }
+
+        .gif:nth-child(3) {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .gif:nth-child(4) {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        footer {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Coelho da Páscoa" class="gif">
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Ovo de Páscoa" class="gif">
+    <img src="https://media.giphy.com/media/l0ExsgrTuACbtP0Pm/giphy.gif" alt="Coelhinho" class="gif">
+    <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="Ovo colorido" class="gif">
+
+    <div class="container">
+        <div class="egg"></div>
+        <h1>Feliz Páscoa!!</h1>
+        <p>Que esta Páscoa seja repleta de amor, renovação e muita alegria! 🐰🍫</p>
+        <footer>Mensagem especial para você!</footer>
+    </div>
+</body>
+</html>
