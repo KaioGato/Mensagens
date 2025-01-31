@@ -47,6 +47,15 @@
       text-decoration: underline;
     }
 
+    /* Texto introdutório abaixo da navbar */
+    .intro-text {
+      text-align: center;
+      background-color: #fff3f5;
+      padding: 15px;
+      font-size: 1.2em;
+      color: #ff4081;
+    }
+
     /* Container principal */
     .container {
       display: flex;
@@ -117,18 +126,13 @@
   
   <div class="navbar">
     <div class="logo">Mensagens Especiais</div>
-    <div class="ph ph-list" onclick="ShowNav()"></div>
-    <!--
-    <nav class="">
-      <a href="#valentim">Dia de São Valentim</a>
-      <a href="#maes">Dia das Mães</a>
-      <a href="#namorados">Dia dos Namorados</a>
-      <a href="#pascoa"></a>
-
-    </nav>
-    -->
   </div>
-  
+
+  <!-- Texto introdutório -->
+  <div class="intro-text">
+    Bem-vindo ao nosso site dedicado a mensagens especiais para datas comemorativas! Aqui você encontra conteúdos originais e criativos para tornar momentos importantes ainda mais significativos. Navegue, compartilhe e aproveite!
+  </div>
+
   <!-- Container Principal -->
   <div class="container">
     <!-- Card para Dia de São Valentim -->
@@ -169,7 +173,6 @@
 
   </div>
 
-
   <script>
      function copyLink(button) {
       const link = button.previousElementSibling.href;
@@ -181,7 +184,6 @@
           alert("Erro ao copiar o link.");
         });
     }
-
 
     function shareLink(button) {
       const link = button.previousElementSibling.previousElementSibling.href;
@@ -198,20 +200,6 @@
       } else {
         alert("O compartilhamento não é suportado neste dispositivo.");
       }
-    }
-
-    function ShowNav() {
-           var elementos = document.getElementsByClassName("");
-        for (var i = 0; i < elementos.length; i++) {
-            var elemento = elementos[i];
-            var estiloDisplay = elemento.style.display;
-
-            if (estiloDisplay === "flex" ) {
-                elemento.style.display = "none"; // Ou qualquer outro valor desejado para exibição
-            } else {
-                elemento.style.display = "flex";
-            }
-        }
     }
   </script>
 
